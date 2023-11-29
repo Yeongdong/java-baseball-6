@@ -5,13 +5,12 @@ import baseball.view.InputView;
 
 public class Application {
     public static void main(String[] args) {
+        InputView.printStartGame();
+        boolean gameContinue = true;
 
-        InputView.printStartGameMessage();
-        boolean gameContinue = false;
-
-        while(!gameContinue) {
-            new BaseballGame().play();
-            gameContinue = InputView.askGameEnd();
+        while(gameContinue) {
+            BaseballGame.play();
+            gameContinue = InputView.inputContinue();
         }
     }
 }

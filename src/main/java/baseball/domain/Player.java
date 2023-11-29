@@ -1,14 +1,17 @@
 package baseball.domain;
 
-import java.util.List;
-
 public class Player {
-    private List<Integer> pickNumbers;
+    private final Answers answers;
 
-    public Player(List<Integer> pickNumbers) {
-        this.pickNumbers = pickNumbers;
+    private Player(Answers answers) {
+        this.answers = answers;
     }
-    public List<Integer> getPickNumbers() {
-        return pickNumbers;
+
+    public static Player from(Answers answers) {
+        return new Player(answers);
+    }
+
+    public Answers getInputNumbers() {
+        return answers;
     }
 }

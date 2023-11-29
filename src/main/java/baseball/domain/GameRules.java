@@ -1,14 +1,16 @@
 package baseball.domain;
 
 public enum GameRules {
-    START(1),
-    END(9),
-    INPUT_LIMIT(3);
+    INPUT_NUMBER_LENGTH(3),
+    CORRECT_ANSWER_NUMBER(3);
+
     private final int value;
+
     GameRules(int value) {
         this.value = value;
     }
-    public int getValue() {
+
+    public final int getValue() {
         return value;
     }
 }
